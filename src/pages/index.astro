@@ -1,5 +1,5 @@
 ---
-import Comp from '../components/card.astro'
+import Main from '../components/main.astro'
 import Sal from '../components/frame'
 ---
 
@@ -12,10 +12,7 @@ import Sal from '../components/frame'
 		<title>Astro</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
-		<Comp title="hola" text="felipe"/>
-		<Comp />
-		<Comp />
+		<Main/>
 		<Sal client:load/>
 	</body>
 </html>

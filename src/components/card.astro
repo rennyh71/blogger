@@ -1,9 +1,15 @@
 ---
-const {title,text} = Astro.props
+import { getCollection, getEntry } from 'astro:content';
+
+const post = await getEntry('blogs', 'post2');
+
+// const {Content, headings, remarkPluginFrontmatter} = await post.render();
+
 ---
 <div class="card">
-    <h1>{title}</h1>
-    <p>{text}</p>
+    <h1>{post.data.title}</h1>
+    <p>{post.data.category}</p>
+    <!-- <Content /> -->
 </div>
 
 <style>
